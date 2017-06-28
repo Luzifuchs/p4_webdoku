@@ -1,0 +1,168 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+@include foundation-grid;
+// @include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+// @include foundation-flex-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+/* CUSTOM CLASSES */
+
+h1 {
+  font-family: 'Fira Sans';
+  font-weight: 900;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+li {
+  color: $dark-gray;
+}
+
+a {
+  color: $dark-gray;
+
+  &:hover {
+    color: $green;
+  }
+
+  &:active {
+    color: $green;
+  }
+
+  &:focus {
+    color: $green;
+    outline: none;
+  }
+}
+
+.off-canvas {
+  & a {
+    color: $white;
+
+    &:hover {
+      color: $green;
+    }
+
+    &:active {
+      color: $green;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+p {
+  color: $dark-gray;
+  font-weight: 200;
+}
+
+.columns-feature {
+  width: 8.33333%;
+}
+
+.headline-feature {
+  text-align: center;
+  margin: auto;
+}
+
+.menu-feature {
+  padding: 0.85em 1em;
+}
+
+.row-feature {
+  padding: 1em 0 3em 0;
+}
+
+.sticky {
+  position: fixed;
+}
+
+.menu-button {
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: $dark-gray;
+    box-shadow: 0 7px 0 $dark-gray, 0 14px 0 $dark-gray;
+  }
+
+  &:hover::after {
+    background: $green;
+    box-shadow: 0 7px 0 $green, 0 14px 0 $green;
+  }
+}
+
+.close-button {
+  color: $white;
+
+  &:hover {
+    color: $green;
+  }
+}
+
+#walnut {
+  display: block;
+	width: 100px;
+	height: 124px;
+	background: url('/assets/img/walnut-closed.png') bottom;
+  transition: 0.5s;
+
+  &:hover {
+    background: url('/assets/img/walnut-open.png') bottom;
+    transition: 0.5s;
+  }
+}
